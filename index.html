@@ -623,7 +623,7 @@ function openQ(cat,q,key){
   const hb=document.getElementById('hint-btn');
   const j=G.teams[G.cur].jokers;
   hb.disabled=(j<=0); hb.textContent='💡 Pista ('+j+')';
-  buildOpts('opts-grid',q,false,chosen=>{
+  buildOpts('opts-grid',G.q,false,chosen=>{
     stopTimer();
     G.done.add(G.q.key);
     if(chosen===G.q.cor){G.teams[G.cur].score+=G.q.pts; G.wrongResult=false;}
